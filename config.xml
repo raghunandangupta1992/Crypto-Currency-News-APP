@@ -2,7 +2,7 @@
 <widget id="com.raghunandangupta.cryptocurrencynews" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>CryptoCurrency Latest News</name>
     <description>
-        Stay updated with the latest news in cryptocurrrency world. All about Bitcoins, Etherium, Ripple etc. Get realtime updates about the crypto world.
+        Stay updated with the latest news in cryptocurrency world. All about Bitcoins, Etherium, Ripple etc. Get realtime updates about the crypto world.
     </description>
     <author email="raghunandangupta1992@gmail.com" href="https://medium.com/@rggroups">
         Raghunandan Gupta
