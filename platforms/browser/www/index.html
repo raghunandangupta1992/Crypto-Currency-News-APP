@@ -69,7 +69,7 @@ blockquote {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  height: calc(100% - 60px);
+  height: 100%;
   padding: 0 15px 100px 20px; 
 }
 .headline p { font-style: italic; color: rgba(255, 255, 255, 0.8); }
@@ -356,20 +356,20 @@ function makeCarousel() {
   var listItems = [], listDots = [];
 
   newsItems.forEach(function(eachItem, i) {
-  	let {source, title, description, urlToImage, url, publishedAt} = eachItem;
+  	var {source, title, description, urlToImage, url, publishedAt} = eachItem;
 
     if (!urlToImage) {
       return;
     }
 
-  	// let iframeContent = `<iframe src=${url} width="100%" height="100%" frameborder="0"></iframe>`;
+  	// var iframeContent = `<iframe src=${url} width="100%" height="100%" frameborder="0"></iframe>`;
 
   	// headline + content
 
     iframeUrls.push(`<iframe src=${url} width="100%" height="100%" frameborder="0"></iframe>`);
 
-  	let itemList = `<div class="slider__slide" data-name="${source.name}" id="slideContent-${i}">
-                      <div class="headline" style="background: linear-gradient(to bottom, rgba(255,0,0,0) 10%, rgb(0, 0, 0));">
+  	var itemList = `<div class="slider__slide" data-name="${source.name}" id="slideContent-${i}">
+                      <div class="headline" style="background: linear-gradient(to bottom, rgba(255,0,0,0) 5%, rgb(0, 0, 0));">
                         <div class="backdrop" style="background-image: url(${urlToImage})"></div>
                         <p><img style="width: 50%" src="${dataSourceImage[source.id]}" alt="${source.name}"></p>
                         <blockquote>
@@ -379,8 +379,10 @@ function makeCarousel() {
                         <br>
                         <small>${formatDate(publishedAt)}</small>
                         <br>
+                        <p>Swipe Up - To Read Full Story</p>
                       </div>
-                      <div style="
+                      <!--
+                        <div style="
                           width: 100%;
                           position: absolute;
                           bottom: 0px;
@@ -389,6 +391,7 @@ function makeCarousel() {
                           font-size: 14px;
                       "><p style="
                           ">⏫ Swipe Up - To Read Full Story</p></div>
+                      -->
                       <div class="content">
                       	<ul>
                         </ul>
@@ -487,7 +490,7 @@ function makeCarousel() {
     },
 
     move: function(toindex) {
-      let _toindex = parseInt(toindex);
+      var _toindex = parseInt(toindex);
       this.currentPosition = this.frameWidth * _toindex;
       this.slider.style.transform = `translateX(-${this.currentPosition}px)`;
       this.currentSlide = _toindex;
