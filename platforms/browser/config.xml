@@ -8,10 +8,10 @@
     </feature>
     <name>CryptoCurrency Latest News</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Stay updated with the latest news in cryptocurrrency world. All about Bitcoins, Etherium, Ripple etc. Get realtime updates about the crypto world.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="raghunandangupta1992@gmail.com" href="https://medium.com/@rggroups">
+        Raghunandan Gupta
     </author>
     <content src="index.html" />
     <access origin="*" />
